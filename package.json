@@ -1,0 +1,75 @@
+{
+  "name": "taskify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node dist/main.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\"",
+    "test": "mocha -r ts-node/register 'test/**/*.spec*.ts'",
+    "integration": "mocha -r ts-node/register 'test/**/*.spec.int.ts'",
+    "coverage": "nyc mocha -r ts-node/register 'test/**/*.spec*.ts'"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "include": [
+      "src/**/!(*.test.*).[tj]s?(x)"
+    ],
+    "exclude": [
+      "src/_tests_/**/*.*"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ]
+  },
+  "keywords": [],
+  "author": "Shashwat Pragya",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/mocha-prepare": "^0.1.0",
+    "@types/sinon": "^10.0.11",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mocha": "^10.0.0",
+    "mongodb-memory-server": "^8.6.0",
+    "mongoose": "^6.3.8",
+    "remark": "^14.0.2",
+    "supertest": "^6.2.3",
+    "ts-mock-imports": "^1.3.8",
+    "ts-mockito": "^2.6.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@fluffy-spoon/substitute": "^1.208.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.42",
+    "@types/supertest": "^2.0.12",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "chai-as-promised": "^7.1.1",
+    "concurrently": "^7.2.1",
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.2",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.16",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  }
+}
