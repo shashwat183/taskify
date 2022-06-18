@@ -7,7 +7,7 @@
     "build": "tsc --build",
     "start": "node dist/main.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\"",
-    "test": "mocha -r ts-node/register 'test/**/*.spec*.ts'",
+    "test": "mocha -r ts-node/register 'test/**/*.spec.ts'",
     "integration": "mocha -r ts-node/register 'test/**/*.spec.int.ts'",
     "coverage": "nyc mocha -r ts-node/register 'test/**/*.spec*.ts'"
   },
