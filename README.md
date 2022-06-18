@@ -5,7 +5,7 @@ It is implemented using nodejs and expressjs. It uses mongodb as the backend
 and mongoose is used as the ODM. Unit and Integration tests are written using
 mocha and chai with several mocking libraries.
 
-# How to run the app locally
+## How to run the app locally
 
 - Clone the repo
 - Install node dependencies
@@ -21,7 +21,7 @@ DB_URL='mongodb://127.0.0.1:27017/Taskify'
 npm run dev
 ```
 
-# Unit Testing
+## Unit Testing
 
 Unit tests can be run by running the following command.
 
@@ -29,7 +29,7 @@ Unit tests can be run by running the following command.
 npm test
 ```
 
-# Integration Testing
+## Integration Testing
 
 Integration tests can be run by running the following command.
 
@@ -37,7 +37,7 @@ Integration tests can be run by running the following command.
 npm run integration
 ```
 
-# Get Test Coverage
+## Get Test Coverage
 
 To get test coverage run the following command
 
