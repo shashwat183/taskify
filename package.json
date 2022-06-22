@@ -17,7 +17,8 @@
       "src/**/!(*.test.*).[tj]s?(x)"
     ],
     "exclude": [
-      "src/_tests_/**/*.*"
+      "src/_tests_/**/*.*",
+      "src/main.ts"
     ],
     "all": true,
     "check-coverage": true,
